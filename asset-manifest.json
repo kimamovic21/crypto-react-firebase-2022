@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/crypto-react-firebase-2022/static/css/main.72ba6b66.css",
+    "main.js": "/crypto-react-firebase-2022/static/js/main.415732e7.js",
+    "index.html": "/crypto-react-firebase-2022/index.html",
+    "main.72ba6b66.css.map": "/crypto-react-firebase-2022/static/css/main.72ba6b66.css.map",
+    "main.415732e7.js.map": "/crypto-react-firebase-2022/static/js/main.415732e7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72ba6b66.css",
+    "static/js/main.415732e7.js"
+  ]
+}
