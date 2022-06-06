@@ -23,4 +23,12 @@
 23. uredujemo ThemeToggle.jsx komponentu
 24. u terminal ukucamo npm i react-icons za instaliranje ikonica
 25. uredujemo Navbar.jsx komponentu
-26. 
+26. kreiramo CoinSearcu.jsx komponentu
+27. u routes folderu, Home.jsx komponenti dodajemo CoinSearch.jsx komponentu
+28. u App.js fajlu dodajemo routes elemente
+29. u terminalu instaliramo npm install axios
+30. uredujemo Home.jsx komponentu
+31. uredujemo CoinSearch.jsx komponentu
+32. u CoinSearch.jsx komponenti instaliramo npm install react-sparklines
+33. u components folderu kreiramo novu komponentu CoinItem.jsx
+34. 

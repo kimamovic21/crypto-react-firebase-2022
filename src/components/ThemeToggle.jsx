@@ -34,4 +34,4 @@ export default ThemeToggle;
 // 2. dodajemo uslov unutar div elementa za ikonice
 // 3. dodajemo onClick dogadaj za promjenu boje pozadine
 // 4. uredujemo izgled divova na stranici
-// 5. 
+
