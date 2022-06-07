@@ -9,7 +9,7 @@ const CoinItem = ({coin}) => {
         <td>{coin.market_cap_rank}</td>
         <td>
             <div>
-                <img src={coin.image} alt={coin.id} />
+                <img src={coin.image} alt={coin.id} style={{width: "5rem"}}/>
                 <p>{coin.name}</p>
             </div>
         </td>
@@ -23,8 +23,17 @@ const CoinItem = ({coin}) => {
                 <SparklinesLine color='blue'/> 
             </Sparklines>
         </td>
+        {/* <td>{coin.sparkline_in_7d.price}</td> */}
     </tr>
   );
 };
 
 export default CoinItem;
+
+
+// 1. dodajemo tr element kao parent element u kojem ce se nalaziti podaci o kriptovalutama
+// 2.
+
+
+
+

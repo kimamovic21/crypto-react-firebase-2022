@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import CoinItem from './CoinItem';
+import {AiOutlineStar} from 'react-icons/ai';
+import {Sparklines, SparklinesLine} from 'react-sparklines';
 
 const CoinSearch = ({coins}) => {
 
@@ -11,7 +13,10 @@ const CoinSearch = ({coins}) => {
         <div>
             <h1>Search crypto</h1>
             <form>
-                <input onChange={(e) => setSearchText(e.target.value)} type="text" placeholder='Search a coin'/>
+                <input onChange={(e) => setSearchText(e.target.value)} 
+                       type="text" 
+                       placeholder='Search a coin'
+                />
             </form>
         </div>
 
@@ -31,20 +36,10 @@ const CoinSearch = ({coins}) => {
             </thead>
 
             <tbody>
-            {coins
-            .filter((value) => {
-              if (searchText === '') {
-                return value;
-              } else if (
-                value.name.toLowerCase().includes(searchText.toLowerCase())
-              ) {
-                return value;
-              }
-            })
-            .map((coin) => (
-              <CoinItem key={coin.id} coin={coin} />
-            ))}
-        </tbody>
+              {coins.map((coin) => (
+                 <CoinItem key={coin.id} coin={coin}/>
+              ))}
+            </tbody>
 
         </table>
 
@@ -53,6 +48,8 @@ const CoinSearch = ({coins}) => {
 }
 
 export default CoinSearch;
+
+
 
 
 
