@@ -31,4 +31,5 @@
 31. uredujemo CoinSearch.jsx komponentu
 32. u CoinSearch.jsx komponenti instaliramo npm install react-sparklines
 33. u components folderu kreiramo novu komponentu CoinItem.jsx
-34. 
+34. u components folderu kreiramo novu komponentu Trending.jsx
+35. 
