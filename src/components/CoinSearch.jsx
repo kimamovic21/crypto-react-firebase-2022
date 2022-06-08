@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import CoinItem from './CoinItem';
-import {AiOutlineStar} from 'react-icons/ai';
-import {Sparklines, SparklinesLine} from 'react-sparklines';
 
 const CoinSearch = ({coins}) => {
 

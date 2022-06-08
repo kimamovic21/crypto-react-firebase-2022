@@ -17,5 +17,4 @@ export default Home;
 
 
 // 1. dodajemo props coins CoinSearch komponenti
-// 2. doajemo Trending komponentu
-// 3. 
+// 2. dodajemo Trending komponentu

@@ -49,7 +49,6 @@ export default CoinItem;
 // 1. dodajemo tr element kao parent element u kojem ce se nalaziti podaci o kriptovalutama
 // 2. dodajemo className elementima
 // 3. dodajemo Link element sa atributom to= { ` ... `}
-// 4. 
 
 
 
