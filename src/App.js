@@ -69,5 +69,5 @@ export default App;
 // 23. dodajemo Route element sa otvorenim i zatvorenim tagom 
 // 24. unutar toga Route elemente dodajemo samozatvarajuci Route element
 // 25. dodajemo Footer.jsx komponentu
-// 26. 
+// 26. uredujemo Foooter.jsx komponentu
  
