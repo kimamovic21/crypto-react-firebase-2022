@@ -37,4 +37,6 @@
 37. otvaramo i uredujemo CoinPage.jsx fajl
 38. instaliramo paket npm install dompurify ???? (na radi mi)
 39. otvaramo components folder i kreiramo Footer.jsx komponentu
-40.  
+40. uredujemo Footer.jsx komeponentu
+41. otvaramo i uredujemo App.js fajl
+42. 

@@ -98,6 +98,8 @@ export default Navbar;
 
 
 
+
+
 // 1. importujemo Link element u kojem se nalazi h1 element
 // 2. dodajemo ThemeToggle komponentu
 // 3. dodajemo div u kojem se nalaze Link elementi

@@ -8,6 +8,7 @@ import Signup from './routes/Signup';
 import Account from './routes/Account';
 import CoinPage from './routes/CoinPage';
 import axios from "axios";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route path=":coinId"/>
         </Route>
       </Routes>
+      <Footer />
     </ThemeProvider>
   );
 }
@@ -66,5 +68,6 @@ export default App;
 // 22. otvaramo i uredujemo Home.jsx komponentu
 // 23. dodajemo Route element sa otvorenim i zatvorenim tagom 
 // 24. unutar toga Route elemente dodajemo samozatvarajuci Route element
-// 25. 
+// 25. dodajemo Footer.jsx komponentu
+// 26. 
  
