@@ -13,10 +13,12 @@ root.render(
 
 
 
+// 1. dodajemo BrowserRouter element
 
 
 
 
+// originalni kod kad se instalira react projekat
 
 // import React from 'react';
 // import ReactDOM from 'react-dom/client';

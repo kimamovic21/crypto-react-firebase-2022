@@ -1,15 +1,29 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
+import { UserAuth } from '../context/AuthContext';
 
 const Navbar = () => {
 
   const [nav, setNav] = useState(false);
 
+  const {user, logout} = UserAuth();
+  const navigate = useNavigate();
+
   const handleNav = () => {
       setNav(!nav)
+  };
+
+  const handleSignOut = async () => {
+    try {
+      await logout()
+      navigate('/')
+    } catch(e) {
+      console.log(e.message)
+    }
   }
+
 
   return (
     <div className='rounded-div flex items-center justify-between h-20 font-bold'> 
@@ -27,6 +41,14 @@ const Navbar = () => {
 
         {/* Sign div */}
 
+        {user?.email ? 
+        (<div>
+            <Link to='/account' className='p-4'>
+                Account
+            </Link>
+            <button onClick={handleSignOut}>Sign out</button>
+        </div>) : 
+        (
         <div className='hidden md:block'>
             <Link className='p-4 hover:text-accent'
                   to='/signin'>
@@ -37,6 +59,8 @@ const Navbar = () => {
                 Sign up
             </Link>
         </div>
+        )
+        }
 
 
         {/* Menu icon */}
@@ -123,4 +147,5 @@ export default Navbar;
 // 21. dodajemo onClick dogadaj Menu icon divu
 // 22. dodajemo uslov (ternarni operator) kako ce se ikone pojavljivati na ekranu
 // 23. u divu za Mobile menu dodajemo klasu kao ternarni operator
-
+// 24. importujemo UserAuth
+// 25. 

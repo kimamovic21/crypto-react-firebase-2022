@@ -39,4 +39,49 @@
 39. otvaramo components folder i kreiramo Footer.jsx komponentu
 40. uredujemo Footer.jsx komeponentu
 41. otvaramo i uredujemo App.js fajl
-42. 
+42. otvaramo i uredujemo Signin.jsx komponentu
+43. otvaramo i uredujemo Signup.jsx komponentu
+44. otvaramo i uredujemo Account.jsx komponentu
+45. u components folderu kreiramo novu SavedCoins.jsx komponentu
+46. uredujemo SavedCoins.jsx komponentu
+47. u src folderu kreiramo fajl firebase.js
+48. 
+
+
+
+Firebase setup
+
+
+47. otvorimo web stranicu https://firebase.google.com/
+48. kliknemo get started
+49. kliknemo add project
+50. unesemo ime projekta i kliklnemo continue
+51. iskljucimo google analytics
+52. kliknemo create project
+53. kad se kreira projekat kliknemo continue
+54. kliknemo </> dugme
+55. unesemo ime aplikacije
+56. kliknemo register app
+57. u terminal ukucamo npm install firebase
+58. kopiramo dokumentaciju u firebase.js fajl
+59. u projekt folderu kreiramo .env fajl
+60. kopiramo odredene stvari iz firebase.js fajla u .env fajl
+61. kad uredimo firebase.js i .env fajlove pritisenmo continue to console
+62. kliknemo Authentication dugme
+63. kliknemo get started
+64. odaberemo email/password metodu
+65. omogucimo samo email/password metodu i kliknemo save
+66. na linku https://firebase.google.com/docs/build?authuser=0&hl=en kliknemo authentication
+67. authentication -> web -> get started
+68. uredujemo firebase.js fajl 
+69. u context folderu dodajemo AuthContext.jsx fajl
+70. uredujemo AuthContext.jsx fajl
+71. otvaramo App.js fajl i uredujemo ga
+72. otvaramo SignUp fajl i uredujemo ga
+72. otvorimo link https://console.firebase.google.com/project/cryptobase-77558/firestore
+73. kliknemo start in test mode i kliknemo next
+74. odaberemo lokaciju i kliknemo enable
+75. otvaramo i uredujemo Account.jsx komponentu
+76. otvaramo i uredujemo Sign.jsx komponentu
+77. otvaramo i uredujemo Navbar.jsx komponentu
+78. 
