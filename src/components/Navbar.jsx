@@ -24,7 +24,6 @@ const Navbar = () => {
     }
   }
 
-
   return (
     <div className='rounded-div flex items-center justify-between h-20 font-bold'> 
 
@@ -41,14 +40,16 @@ const Navbar = () => {
 
         {/* Sign div */}
 
-        {user?.email ? 
-        (<div>
+        {user?.email ? ( 
+        <div>
             <Link to='/account' className='p-4'>
                 Account
             </Link>
-            <button onClick={handleSignOut}>Sign out</button>
-        </div>) : 
-        (
+            <button onClick={handleSignOut}>
+              Sign out
+            </button>
+        </div>
+        ) : (
         <div className='hidden md:block'>
             <Link className='p-4 hover:text-accent'
                   to='/signin'>
@@ -58,8 +59,7 @@ const Navbar = () => {
                   to='/signup'>
                 Sign up
             </Link>
-        </div>
-        )
+        </div>)
         }
 
 
@@ -86,11 +86,13 @@ const Navbar = () => {
             >
 
             <ul className='w-full p-4'>
-                <li className='border-b py-6'>
+                <li onClick={handleNav} 
+                    className='border-b py-6'>
                     <Link to='/'>Home</Link>
                 </li>
-                <li className='border-b py-6'>
-                    <Link to='/'>Account</Link>
+                <li onClick={handleNav} 
+                    className='border-b py-6'>
+                    <Link to='/account'>Account</Link>
                 </li>
                 <li className='py-6'>
                     <ThemeToggle />
@@ -101,12 +103,14 @@ const Navbar = () => {
 
             <div className='w-full flex flex-col p-4'>
                 <Link to='/signin'>
-                    <button className='w-full my-2 p-3 bg-primary text-primary border border-secondary rounded-2xl shadow-xl'>
+                    <button onClick={handleNav} 
+                            className='w-full my-2 p-3 bg-primary text-primary border border-secondary rounded-2xl shadow-xl'>
                         Sign in
                     </button>
                 </Link>
                 <Link to='/signup'>
-                    <button className='w-full my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl'>
+                    <button onClick={handleNav} 
+                            className='w-full my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl'>
                         Sign up
                     </button>
                 </Link>
@@ -118,6 +122,7 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
 
 
 
@@ -148,4 +153,4 @@ export default Navbar;
 // 22. dodajemo uslov (ternarni operator) kako ce se ikone pojavljivati na ekranu
 // 23. u divu za Mobile menu dodajemo klasu kao ternarni operator
 // 24. importujemo UserAuth
-// 25. 
+// 25. u divu sa sign dodajemo user?.email ?

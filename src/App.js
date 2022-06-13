@@ -73,4 +73,5 @@ export default App;
 // 24. unutar toga Route elemente dodajemo samozatvarajuci Route element
 // 25. dodajemo Footer.jsx komponentu
 // 26. uredujemo Foooter.jsx komponentu
+// 27. dodajemo AuthContextProvider element
  

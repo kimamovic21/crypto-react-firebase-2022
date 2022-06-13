@@ -17,13 +17,13 @@ const Signin = () => {
     e.preventDefault()
     setError('')
     try {
-      await signIn(email, password)
-      navigate('/account')
+      await signIn(email, password);
+      navigate('/account');
     } catch (e) {
-      setError(e.message)
-      console.log(e.message)
-    } 
-  }
+      setError(e.message);
+      console.log(e.message);
+    };
+  };
 
 
   return (
@@ -76,8 +76,8 @@ const Signin = () => {
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Signin;
 

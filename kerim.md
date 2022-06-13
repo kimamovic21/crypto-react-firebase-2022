@@ -84,4 +84,6 @@ Firebase setup
 75. otvaramo i uredujemo Account.jsx komponentu
 76. otvaramo i uredujemo Sign.jsx komponentu
 77. otvaramo i uredujemo Navbar.jsx komponentu
-78. 
+78. otvaramo i uredujemo CoinItem.jsx komponentu
+79. ovaramo i uredujemo Navbar.jsx komponentu
+80. 

@@ -18,8 +18,8 @@ const Signup = () => {
   const {signUp} = UserAuth();
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setError('')
+    e.preventDefault();
+    setError('');
     try {
       await signUp(email, password)
       navigate('/account')
@@ -84,6 +84,7 @@ const Signup = () => {
 }
 
 export default Signup;
+
 
 
 

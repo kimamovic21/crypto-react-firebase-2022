@@ -1,10 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {AiOutlineClose} from 'react-icons/ai';
+import {doc, onSnapshot, updateDoc} from 'firebase/firestore';
+import {db} from '../firebase';
+import { UserAuth } from '../context/AuthContext';
 
 const SavedCoins = () => {
 
   const [coins, setCoins] = useState([]);
+  const {user} = UserAuth();
+
+  // Dodavanje coina u watch list
+  useEffect(() => {
+    onSnapshot(doc(db, 'users', `${user?.email}`), (doc) => {
+      setCoins(doc.data().watchList)
+    });
+  }, [user?.email]);
+
+  const coinPath = doc(db, 'users', `${user?.email}`)
+  const deleteCoin = async(passedId) => {
+    try {
+      const result = coins.filter((item) => item.id !== passedId)
+      await updateDoc(coinPath, {
+        watchList: result
+      });
+    } catch (e) {
+      console.log(e.message);
+    };
+  };
 
   return (
     <div>
@@ -44,7 +67,8 @@ const SavedCoins = () => {
                             </div>
                         </Link>
                         <td className='pl-8'>
-                            <AiOutlineClose className='cursor-pointer'/>
+                            <AiOutlineClose onClick={() => deleteCoin(coin.id)}
+                                            className='cursor-pointer'/>
                         </td>
                     </td>
                 </tr>
@@ -62,8 +86,11 @@ export default SavedCoins;
 
 
 
+
 // 1. dodajemo div elemente
 // 2. dodajemo useState
 // 3. dodajemo uslov - ternarni operator 
 // 4. dodajemo Link element sa atributom to
-// 5. 
+// 5. dodajemo const {user}
+// 6. dodajemo onClick dogadaj AiOutlineClose elementu
+// 7. 

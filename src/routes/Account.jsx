@@ -10,10 +10,10 @@ const Account = () => {
 
   const handleSignOut = async () => {
     try {
-      await logout()
-      navigate('/')
+      await logout();
+      navigate('/');
     } catch(e) {
-      console.log(e.message)
+      console.log(e.message);
     }
   }
 

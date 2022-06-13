@@ -1,12 +1,40 @@
-import React from 'react';
-import { AiOutlineStar } from 'react-icons/ai';
+import React, { useState } from 'react';
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { Sparklines, SparklinesLine } from 'react-sparklines';
+import { UserAuth } from '../context/AuthContext';
+import { db } from '../firebase';
+import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
 
 const CoinItem = ({coin}) => {
+
+  const [savedCoin, setSavedCoin] = useState(false);
+  const {user} = UserAuth();
+
+  // Logic from firebase to save a coin
+  const coinPath = doc(db, 'users', `${user?.email}`);
+  const saveCoin = async () => {
+    if(user?.email) {
+      setSavedCoin(true);
+      await updateDoc(coinPath, {
+        watchList: arrayUnion({
+          id: coin.id,
+          name: coin.name,
+          image: coin.image,
+          rank: coin.market_cap_rank,
+          symbol: coin.symbol
+        })
+      })
+    } else {
+      alert('Please sign in to save a coin in your watch list');
+    }
+  };
+
   return (
     <tr className='h-[80px] border-b overflow-hidden'>
-      <td><AiOutlineStar/></td>
+      <td onClick={saveCoin}>
+        {savedCoin ? <AiFillStar/> : <AiOutlineStar/>}
+      </td>
         <td>{coin.market_cap_rank}</td>
         <td>
           <Link to={`/coin/${coin.id}`}>
@@ -46,9 +74,16 @@ export default CoinItem;
 
 
 
+
 // 1. dodajemo tr element kao parent element u kojem ce se nalaziti podaci o kriptovalutama
 // 2. dodajemo className elementima
 // 3. dodajemo Link element sa atributom to= { ` ... `}
+// 4. dodajemo useState hook
+// 5. dodajemo UserAuth() metodu za firebase
+// 6. dodajemo logiku da sacuvamo coin 
+// 7. dodajemo savedCoin ? uslov ispod return
+// 8. td elementu dodajemo onClick dogadaj
+// 9. 
 
 
 
