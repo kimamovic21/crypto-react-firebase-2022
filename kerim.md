@@ -86,4 +86,4 @@ Firebase setup
 77. otvaramo i uredujemo Navbar.jsx komponentu
 78. otvaramo i uredujemo CoinItem.jsx komponentu
 79. ovaramo i uredujemo Navbar.jsx komponentu
-80. 
+
